@@ -4,6 +4,8 @@
     Author     : ETEP
 --%>
 
+<%@page import="model.Aluno"%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -34,14 +36,17 @@
             }
             out.println("Nome Responsavel :  " + nomeResponsavel);
             
+            Aluno aluno = new Aluno();
             
-
-
+            aluno.setNome(nome);
+            aluno.setMatricula(matricula);
+            aluno.setId_turma(id_turma);
+            aluno.setNomeResposavel(nomeResponsavel);
+            
+            out.println(aluno);
 
         %>
         <hr>
-
         <a href="index.jsp">Voltar ao Início</a>
-
     </body>
 </html>
