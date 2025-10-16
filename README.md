@@ -4,7 +4,7 @@
 - Nome do computador: LAB2PROF 
 - Usuário: ETEP 
 - Diretório atual: C:\Users\ETEP\Documents\NetBeansProjects\diarioescolar 
-- Data e hora: 16/10/2025  9:35:06,35 
+- Data e hora: 16/10/2025  9:37:04,01 
  
 ## Descrição 
 Este projeto foi iniciado automaticamente com um script em Windows CMD. 
