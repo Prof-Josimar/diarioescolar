@@ -1,12 +1,12 @@
 # Projeto Java 2025 
  
-## Informaá‰es do sistema 
+## Informa√ß√µes do sistema 
 - Nome do computador: LAB2PROF 
-- Usu†rio: ETEP 
-- Diret¢rio atual: C:\Users\ETEP\Documents\NetBeansProjects\diarioescolar 
-- Data e hora: 16/10/2025  9:33:22,61 
+- Usu√°rio: ETEP 
+- Diret√≥rio atual: C:\Users\ETEP\Documents\NetBeansProjects\diarioescolar 
+- Data e hora: 16/10/2025  9:35:06,35 
  
-## Descriá∆o 
+## Descri√ß√£o 
 Este projeto foi iniciado automaticamente com um script em Windows CMD. 
  
 ## Autor 
