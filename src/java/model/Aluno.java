@@ -69,8 +69,15 @@ public class Aluno {
     public void setUpdatedAt(LocalDateTime updatedAt) {
         this.updatedAt = updatedAt;
     }
+
+    @Override
+    public String toString() {
+        return "Aluno{" + "id=" + id + ", nome=" + nome + ", matricula=" + matricula + ", id_turma=" + id_turma + ", nomeResposavel=" + nomeResposavel + ", createdAt=" + createdAt + ", updatedAt=" + updatedAt + '}';
+    }
     
         
+    
+    
     
     
 }
