@@ -1,13 +1,22 @@
-![Logo](https://i.ytimg.com/vi/nbAYB6HyTQI/hqdefault.jpg) 
-## Informações do sistema 
-- Nome do computador: LAB2PROF 
-- Usuário: ETEP 
-- Diretório atual: C:\Users\ETEP\Documents\NetBeansProjects\diarioescolar 
-- Data e hora: 16/10/2025 11:07:13,59 
- 
-## Descrição 
-Este projeto foi iniciado automaticamente com um script em Windows CMD. 
- 
-## Autor 
-Josimar Ribeiro 
- 
+# 🚀 Projeto Atualizado **17/10/2025 20:54:11** ⚙️
+
+
+<img width="300" src="https://cms.admin.containerize.com/templates/aspose/img/products/email/headers/aspose_email-for-java.svg" alt="BACKUP JAVA" style="border: 5px solid #333; border-radius: 10px;" />
+
+📅 Última atualização: **17/10/2025 20:54:11**
+
+Diretório atual: C:\Users\admin\Documents\NetBeansProjects\diarioescolar
+
+Hostname da máquina: LAPTOP-ACER
+
+---
+
+## 📌 Histórico
+Este projeto é atualizado automaticamente via script.
+
+✔️ Commits enviados diretamente para o repositório remoto
+✔️ Registro de data e hora no README.md
+
+---
+
+💻🧠✅✏️❌🔍📦
