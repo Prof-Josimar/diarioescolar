@@ -1,9 +1,9 @@
-# 🚀 Projeto Atualizado **17/10/2025 21:27:38** ⚙️
+# 🚀 Projeto Atualizado **18/10/2025 13:00:00** ⚙️
 
 
 <img width="300" src="https://cms.admin.containerize.com/templates/aspose/img/products/email/headers/aspose_email-for-java.svg" alt="BACKUP JAVA" style="border: 5px solid #333; border-radius: 10px;" />
 
-📅 Última atualização: **17/10/2025 21:27:38**
+📅 Última atualização: **18/10/2025 13:00:00**
 
 Diretório atual: C:\Users\admin\Documents\NetBeansProjects\diarioescolar
 
