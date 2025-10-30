@@ -4,7 +4,7 @@
 - Nome do computador: LAB2PROF 
 - Usuário: ETEP 
 - Diretório atual: C:\Users\ETEP\Documents\NetBeansProjects\diarioescolar 
-- Data e hora: 30/10/2025  8:25:30,38 
+- Data e hora: 30/10/2025  8:25:57,38 
  
 ![Logo do Projeto](https://uxwing.com/wp-content/themes/uxwing/download/file-and-folder-type/java-icon.png) 
  
