@@ -7,7 +7,6 @@ color 1F
 REM === Configurações ===
 set "project_name=Projeto Java 2025"
 set "author=Josimar Ribeiro"
-set "description=Este projeto foi iniciado automaticamente com um script em Windows CMD."
 set "save_path=%CD%"
 set "date_time=%DATE% %TIME%"
 set "logo_url=https://uxwing.com/wp-content/themes/uxwing/download/file-and-folder-type/java-icon.png"
@@ -25,8 +24,6 @@ for /f "tokens=* delims=" %%g in ('git --version') do echo - %%g >> %filename%
 echo. >> %filename%
 echo ![Logo do Projeto](%logo_url%) >> %filename%
 echo. >> %filename%
-echo ## Descrição >> %filename%
-echo %description% >> %filename%
 echo. >> %filename%
 echo ## Autor >> %filename%
 echo %author% >> %filename%
