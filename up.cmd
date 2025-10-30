@@ -9,7 +9,7 @@ set "project_name=Projeto Java 2025"
 set "author=Josimar Ribeiro"
 set "save_path=%CD%"
 set "date_time=%DATE% %TIME%"
-set "logo_url=https://uxwing.com/wp-content/themes/uxwing/download/file-and-folder-type/java-icon.png"
+set "logo_url=https://miro.medium.com/v2/resize:fit:720/format:webp/0*gtY-llyEbkeoS1Sp.png"
 set "filename=README.md"
 
 REM === Cria o README.md ===
