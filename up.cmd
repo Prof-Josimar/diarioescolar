@@ -30,7 +30,12 @@ echo %description% >> %filename%
 echo. >> %filename%
 echo ## Autor >> %filename%
 echo %author% >> %filename%
+echo. >> %filename%
+echo. >> %filename%
 echo. OBS : oupl atalho para out.println(""); >> %filename%
+echo. >> %filename%
+echo. >> %filename%
+echo. >> %filename%
 echo Salvo de %save_path% em %date_time% >> %filename%
 
 REM === Verifica e configura Git ===
