@@ -21,6 +21,7 @@
 
             <%
                 List<Aluno> alunos = AlunoDAO.listarAlunos();
+                
             %>
 
             <table class="table table-striped table-hover align-middle">
@@ -71,6 +72,6 @@
 
             <a href="inserirAluno.jsp" class="btn btn-primary mt-3">Cadastrar novo aluno</a>
         </div>
-       <a href="index.jsp">Voltar ao Início</a>
+        <a href="index.jsp">Voltar ao Início</a>
     </body>
 </html>

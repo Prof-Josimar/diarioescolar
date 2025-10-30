@@ -1,7 +1,7 @@
 # Projeto Java 2025 
  
 ## Informações do sistema 
-- Data e hora: 30/10/2025 16:03:49,78 
+- Data e hora: 30/10/2025 17:30:21,00 
 - Usuário: lenovo 
 - Computador: DESKTOP-0VJPAV6 
 - Diretório atual: C:\Users\lenovo\Documents\NetBeansProjects\diarioescolar 
@@ -14,5 +14,5 @@ Este projeto foi iniciado automaticamente com um script em Windows CMD.
  
 ## Autor 
 Josimar Ribeiro 
- 
-Salvo de C:\Users\lenovo\Documents\NetBeansProjects\diarioescolar em 30/10/2025 16:03:49,78 
+ OBS : oupl atalho para out.println(""); 
+Salvo de C:\Users\lenovo\Documents\NetBeansProjects\diarioescolar em 30/10/2025 17:30:21,00 

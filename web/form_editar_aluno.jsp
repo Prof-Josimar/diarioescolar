@@ -1,6 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     String id = request.getParameter("id");
+   
+
+    
 %>
 
 <html>
@@ -15,6 +18,7 @@
 
     <!-- Aqui você pode buscar o aluno pelo ID e preencher um form -->
     <a href="form_listar_alunos.jsp" class="btn btn-secondary mt-3">Voltar</a>
+    
 </div>
 </body>
 </html>
