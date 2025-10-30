@@ -44,8 +44,7 @@ git add . -v
 git commit -m "Updated at %date% %time%"
 git push -u origin main
 
-REM === Log e finalização ===
-echo Script executado em %date_time% >> log_execucao.txt
+
 
 
 
