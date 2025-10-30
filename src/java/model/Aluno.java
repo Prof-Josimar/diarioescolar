@@ -8,11 +8,10 @@ public class Aluno {
     private String nome;
     private String matricula;
     private int id_turma;
-    private String nomeResposavel;
+    private String nomeResponsavel;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
-    // criar os getters e setteres
     public int getId() {
         return id;
     }
@@ -45,12 +44,12 @@ public class Aluno {
         this.id_turma = id_turma;
     }
 
-    public String getNomeResposavel() {
-        return nomeResposavel;
+    public String getNomeResponsavel() {
+        return nomeResponsavel;
     }
 
-    public void setNomeResposavel(String nomeResposavel) {
-        this.nomeResposavel = nomeResposavel;
+    public void setNomeResponsavel(String nomeResponsavel) {
+        this.nomeResponsavel = nomeResponsavel;
     }
 
     public LocalDateTime getCreatedAt() {
@@ -71,16 +70,11 @@ public class Aluno {
 
     @Override
     public String toString() {
-        return "Aluno{" + "id=" + id + ", nome=" + nome + ", matricula=" + 
-                matricula + ", id_turma=" + id_turma + ", nomeResposavel=" +
-                nomeResposavel + ", createdAt=" + createdAt +
-                ", updatedAt=" + updatedAt + '}';
+        return "Aluno{" + "id=" + id + ", nome=" + nome + ", matricula=" + matricula + ", id_turma=" + id_turma + ", nomeResponsavel=" + nomeResponsavel + ", createdAt=" + createdAt + ", updatedAt=" + updatedAt + '}';
     }
 
-    public Aluno() {
-        System.out.println("New Aluno");
-    }
     
+
     
     
 

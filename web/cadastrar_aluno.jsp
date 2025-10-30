@@ -4,6 +4,7 @@
     Author     : ETEP
 --%>
 
+<%@page import="control.AlunoDAO"%>
 <%@page import="model.Aluno"%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -35,22 +36,25 @@
                 nomeResponsavel = "";
             }
             out.println("Nome Responsavel :  " + nomeResponsavel);
-            
+
             Aluno aluno = new Aluno();
-            
+
             aluno.setNome(nome);
             aluno.setMatricula(matricula);
             aluno.setId_turma(id_turma);
-            aluno.setNomeResposavel(nomeResponsavel);
-            
-            out.println(aluno);
-            
-            
-
-
-
+            aluno.setNomeResponsavel(nomeResponsavel);
 
             
+            out.println("<hr>");
+             
+            boolean sucesso = AlunoDAO.inserirAluno(aluno);
+
+            if (sucesso) {
+                out.println("Dados Salvos");
+            } else {
+                out.println("Ocorreu um erro ao salvar");
+            }
+
 
         %>
         <hr>

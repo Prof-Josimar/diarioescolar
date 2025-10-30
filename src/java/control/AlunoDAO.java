@@ -8,7 +8,7 @@ import model.Aluno;
 public class AlunoDAO {
 
     public static boolean inserirAluno(Aluno aluno) {
-        String sql = "INSERT INTO aluno (nome, matricula, id_turma, nomeResposavel) VALUES (?, ?, ?, ?)";
+        String sql = "INSERT INTO aluno (nome, matricula, id_turma, nomeResponsavel) VALUES (?, ?, ?, ?)";
 
         try (Connection con = Conexao.getConexao(); PreparedStatement stmt = con.prepareStatement(sql)) {
 
@@ -20,7 +20,7 @@ public class AlunoDAO {
             stmt.setString(1, aluno.getNome());
             stmt.setString(2, aluno.getMatricula());
             stmt.setInt(3, aluno.getId_turma());
-            stmt.setString(4, aluno.getNomeResposavel());
+            stmt.setString(4, aluno.getNomeResponsavel());
 
             int linhasAfetadas = stmt.executeUpdate();
             return linhasAfetadas > 0;
