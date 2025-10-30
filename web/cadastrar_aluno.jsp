@@ -44,10 +44,10 @@
                         aluno.setNomeResponsavel(nomeResponsavel);
 
 
-                        out.println("
-                        <hr>");
+                        
 
                         boolean sucesso = AlunoDAO.inserirAluno(aluno);
+                        
 
                         if (sucesso) {
                         out.println("Dados Salvos");
