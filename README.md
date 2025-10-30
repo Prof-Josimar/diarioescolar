@@ -1,7 +1,7 @@
 # Projeto Java 2025 
  
 ## Informações do sistema 
-- Data e hora: 30/10/2025 11:28:59,33 
+- Data e hora: 30/10/2025 11:31:37,42 
 - Usuário: ETEP 
 - Computador: LAB2PROF 
 - Diretório atual: C:\Users\ETEP\Documents\NetBeansProjects\diarioescolar 
@@ -15,4 +15,4 @@ Este projeto foi iniciado automaticamente com um script em Windows CMD.
 ## Autor 
 Josimar Ribeiro 
  
-Salvo de C:\Users\ETEP\Documents\NetBeansProjects\diarioescolar em 30/10/2025 11:28:59,33 
+Salvo de C:\Users\ETEP\Documents\NetBeansProjects\diarioescolar em 30/10/2025 11:31:37,42 
