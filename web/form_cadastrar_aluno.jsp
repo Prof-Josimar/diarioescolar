@@ -29,7 +29,7 @@
             <label for="nomeResponsavel">Nome do Responsável:</label>
             <input type="text" id="nomeResponsavel" name="nomeResponsavel" value="Irene Ribeiro"/><br/><br/>
 
-            <input type="submit" value="Cadastrar" />
+            <input type="submit" value="Cadastrar"  class="btn btn-success"/>
         </form>
 
 

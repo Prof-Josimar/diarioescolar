@@ -44,6 +44,13 @@
             aluno.setNomeResposavel(nomeResponsavel);
             
             out.println(aluno);
+            
+            
+
+
+
+
+            
 
         %>
         <hr>
