@@ -1,0 +1,32 @@
+CREATE DATABASE IF NOT EXISTS `diarioescolar`;
+
+USE `diarioescolar`;
+
+
+CREATE TABLE IF NOT EXISTS `turma` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+
+
+CREATE TABLE IF NOT EXISTS `aluno` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(100) NOT NULL,
+  `matricula` varchar(50) NOT NULL,
+  `id_turma` int(11) NOT NULL,
+  `nomeResponsavel` varchar(100) DEFAULT NULL,
+  `created_at` datetime DEFAULT current_timestamp(),
+  `updated_at` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `matricula` (`matricula`),
+  KEY `fk_turma` (`id_turma`),
+  CONSTRAINT `fk_turma` FOREIGN KEY (`id_turma`) REFERENCES `turma` (`id`)
+);
+
+
+SELECT a.id,a.nome,a.matricula,
+a.nomeResponsavel,t.nome FROM aluno AS a
+INNER JOIN turma AS t
+ON a.id=t.id
