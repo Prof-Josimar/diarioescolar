@@ -9,7 +9,7 @@ public final class Conexao {
 
     private static final String URL = "jdbc:mysql://localhost:3306/diarioescolar";
     private static final String USER = "root";
-    private static final String PASSWORD = "bty780";
+    private static final String PASSWORD = "";
 
     // Impede que a classe seja instanciada
     private Conexao() {

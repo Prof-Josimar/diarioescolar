@@ -1,11 +1,11 @@
 # Projeto Java 2025 
  
 ## Informações do sistema 
-- Data e hora: 09/11/2025 10:40:28,75 
-- Usuário: admin 
-- Computador: LAPTOP-ACER 
-- Diretório atual: C:\Users\admin\Documents\NetBeansProjects\diarioescolar 
-- git version 2.51.0.windows.2 
+- Data e hora: 12/11/2025  8:07:15,44 
+- Usuário: ETEP 
+- Computador: LAB2PROF 
+- Diretório atual: C:\Users\ETEP\Documents\NetBeansProjects\diarioescolar 
+- git version 2.51.0.windows.1 
  
 ![Logo do Projeto](https://github.com/Prof-Josimar/diarioescolar/blob/main/web/images/logo.png) 
  
