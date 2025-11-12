@@ -22,8 +22,14 @@
     <a href="form_cadastrar_aluno.jsp">Cadastrar Aluno</a>
     <br><br>
     <a href="form_listar_alunos.jsp">Listar Alunos</a></h1>
-        
-        
+            <br><br>
+        <a href="setup.jsp">Criar Banco e Tabelas</a>
+     <br><br>
+     <a href="teste_conexao.jsp">Teste Banco e Tabelas</a>
+       
+   <pre>     
+C:\temp\%db_%y_%m_%d_%h_%i.sql
+</pre>
 </body>
 
 </html>

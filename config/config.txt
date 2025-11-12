@@ -1,0 +1,9 @@
+variaveis de ambiente
+
+JAVA_HOME=C:\Program Files\Apache NetBeans\jdk
+
+PATH;
+C:\Program Files\Apache NetBeans\jdk\bin
+
+conf
+netbeans_jdkhome="C:\Program Files\Apache NetBeans\jdk"
