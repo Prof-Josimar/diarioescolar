@@ -1,7 +1,7 @@
 # Projeto Java 2025 
  
 ## Informações do sistema 
-- Data e hora: 13/11/2025  8:05:13,73 
+- Data e hora: 13/11/2025 10:48:13,00 
 - Usuário: ETEP 
 - Computador: LAB2PROF 
 - Diretório atual: C:\Users\ETEP\Documents\NetBeansProjects\diarioescolar 
