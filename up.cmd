@@ -25,7 +25,9 @@ echo - Diretório atual: %CD% >> %filename%
 for /f "tokens=* delims=" %%g in ('git --version') do echo - %%g >> %filename%
 echo. >> %filename%
 echo ![Logo do Projeto](%logo_url%) >> %filename%
-echo ![Logo do Projeto](%logo_url2%) >> %filename%
+
+echo ^<img src="%logo_url2%" width="300"^> >> %filename%
+
 echo. >> %filename%
 echo. >> %filename%
 echo ## Autor >> %filename%
