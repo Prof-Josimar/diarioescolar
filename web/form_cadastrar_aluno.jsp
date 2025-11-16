@@ -1,3 +1,6 @@
+<%@page import="control.TurmaDAO"%>
+<%@page import="java.util.List"%>
+<%@page import="model.Turma"%>
 <%
     request.setAttribute("titulo", "Lista de Alunos");
 %>
@@ -18,6 +21,24 @@
             <label for="matricula" class="form-label">Matrícula:</label>
             <input type="text" class="form-control" id="matricula" name="matricula"
                    required>
+        </div>
+
+        <%
+            List<Turma> listaTurmas = TurmaDAO.listarTodas();
+            request.setAttribute("listaTurmas", listaTurmas);
+            request.getRequestDispatcher("form_aluno.jsp").forward(request, response);
+
+        %>
+
+
+
+        <div class="mb-3">
+            <label for="id_turma" class="form-label">Turma:</label>
+            <select class="form-select" id="id_turma" name="id_turma" required>
+                <c:forEach var="turma" items="${listaTurmas}">
+                    <option value="${turma.id}">${turma.nome}</option>
+                </c:forEach>
+            </select>
         </div>
 
         <div class="mb-3">

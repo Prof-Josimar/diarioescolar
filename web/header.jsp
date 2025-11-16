@@ -45,6 +45,12 @@
                         <li class="nav-item"><a class="nav-link" href="form_listar_alunos.jsp">Listar Alunos</a></li>
                         <li class="nav-item separator"></li>
                         <li class="nav-item"><a class="nav-link" href="form_cadastrar_turmas.jsp">Cadastrar Turmas</a></li>
+                        <li class="nav-item separator"></li>
+                        <li class="nav-item"><a class="nav-link" href="setup.jsp">setup</a></li>
+                        <li class="nav-item"><a class="nav-link" href="teste_conexao.jsp">teste_conexao</a></li>
+
+
+
 
                     </ul>
                 </div>

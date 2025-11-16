@@ -11,6 +11,8 @@ public class Aluno {
     private String nomeResponsavel;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
+    private Turma turma;
+
 
     public int getId() {
         return id;
@@ -71,6 +73,14 @@ public class Aluno {
     @Override
     public String toString() {
         return "Aluno{" + "id=" + id + ", nome=" + nome + ", matricula=" + matricula + ", id_turma=" + id_turma + ", nomeResponsavel=" + nomeResponsavel + ", createdAt=" + createdAt + ", updatedAt=" + updatedAt + '}';
+    }
+
+    public Turma getTurma() {
+        return turma;
+    }
+
+    public void setTurma(Turma turma) {
+        this.turma = turma;
     }
 
     
