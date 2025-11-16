@@ -23,7 +23,7 @@ public final class Conexao {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(URL, USER, PASSWORD);
-            System.out.println("✅ Conexão bem-sucedida com o banco de dados!");
+            //System.out.println("✅ Conexão bem-sucedida com o banco de dados!");
         } catch (ClassNotFoundException e) {
             System.err.println("❌ Driver JDBC não encontrado: " + e.getMessage());
         } catch (SQLException e) {

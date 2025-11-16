@@ -1,3 +1,6 @@
+<%@page import="control.TurmaDAO"%>
+<%@page import="java.util.List"%>
+<%@page import="model.Turma"%>
 <%@page import="control.AlunoDAO"%>
 <%@page import="model.Aluno"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -11,7 +14,13 @@
     <body class="container mt-4">
 
         <%
+            List<Turma> listaTurmas = TurmaDAO.listarTodas();
+        %>
+
+
+        <%
             int id = Integer.parseInt(request.getParameter("id"));
+            out.println(id);
             Aluno aluno = AlunoDAO.buscarPorId(id);
 
             if (aluno == null) {
@@ -36,9 +45,22 @@
             </div>
 
             <div class="mb-3">
-                <label class="form-label">ID da Turma:</label>
-                <input type="number" name="id_turma" class="form-control" value="<%= aluno.getId_turma()%>" required>
+                <label class="form-label">Turma:</label>
+                <select class="form-select" id="id_turma" name="id_turma" required>
+                    <%
+                        for (Turma turma : listaTurmas) {
+                            String selected = (turma.getId() == aluno.getId_turma()) ? "selected" : "";
+                    %>
+                    <option value="<%= turma.getId()%>" <%= selected%>>
+                        <%= turma.getId()%> - <%= turma.getNome()%>
+                    </option>
+                    <%
+                        }
+                    %>
+                </select>
             </div>
+
+                   
 
             <div class="mb-3">
                 <label class="form-label">Nome do Responsável:</label>

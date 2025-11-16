@@ -1,3 +1,4 @@
+<%@ include file="header.jsp" %>
 <%@page import="java.sql.*"%>
 <%@page import="control.Conexao"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -30,7 +31,8 @@
     }
 %>
 
-<a href="index.jsp" class="btn btn-primary mt-3">Voltar</a>
 
+<%@ include file="footer.jsp" %>
 </body>
 </html>
+

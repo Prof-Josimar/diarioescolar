@@ -11,9 +11,9 @@ public class Aluno {
     private String nomeResponsavel;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
-    private Turma turma;
+    private Turma turma; // objeto Turma associado
 
-
+    // getters e setters
     public int getId() {
         return id;
     }
@@ -27,7 +27,7 @@ public class Aluno {
     }
 
     public void setNome(String nome) {
-        this.nome = nome;
+        this.nome = nome.toUpperCase();
     }
 
     public String getMatricula() {
@@ -51,7 +51,7 @@ public class Aluno {
     }
 
     public void setNomeResponsavel(String nomeResponsavel) {
-        this.nomeResponsavel = nomeResponsavel;
+        this.nomeResponsavel = nomeResponsavel.toUpperCase();
     }
 
     public LocalDateTime getCreatedAt() {
@@ -70,11 +70,6 @@ public class Aluno {
         this.updatedAt = updatedAt;
     }
 
-    @Override
-    public String toString() {
-        return "Aluno{" + "id=" + id + ", nome=" + nome + ", matricula=" + matricula + ", id_turma=" + id_turma + ", nomeResponsavel=" + nomeResponsavel + ", createdAt=" + createdAt + ", updatedAt=" + updatedAt + '}';
-    }
-
     public Turma getTurma() {
         return turma;
     }
@@ -83,9 +78,12 @@ public class Aluno {
         this.turma = turma;
     }
 
+    @Override
+    public String toString() {
+        return "Aluno{" + "id=" + id + ", nome=" + nome + ", matricula=" + matricula + ", id_turma=" + id_turma + ", nomeResponsavel=" + nomeResponsavel + ", createdAt=" + createdAt + ", updatedAt=" + updatedAt + ", turma=" + turma + '}';
+    }
     
-
     
     
-
+    
 }

@@ -4,18 +4,15 @@
 
 <%
     request.setAttribute("titulo", "Lista de Alunos");
+    List<Aluno> alunos = AlunoDAO.listarAlunos();
 %>
 <%@ include file="header.jsp" %>
 
 <div class="card shadow-sm p-4 mt-4">
     <h2 class="mb-4 text-center text-primary">Lista de Alunos</h2>
 
-    <%
-        List<Aluno> alunos = AlunoDAO.listarAlunos();
-    %>
-
-    <table class="table table-striped table-hover align-middle">
-        <thead class="table-primary">
+    <table class="table table-striped">
+        <thead>
             <tr>
                 <th>ID</th>
                 <th>Nome</th>
@@ -27,14 +24,13 @@
         </thead>
         <tbody>
             <%
-                if (alunos != null && !alunos.isEmpty()) {
-                    for (Aluno a : alunos) {
+                for (Aluno a : alunos) {
             %>
             <tr>
                 <td><%= a.getId()%></td>
                 <td><%= a.getNome()%></td>
                 <td><%= a.getMatricula()%></td>
-                <td><%= a.getId_turma()%></td>
+                <td><%= a.getTurma().getNome()%></td>
                 <td><%= a.getNomeResponsavel()%></td>
                 <td>
                     <!-- Botão Editar -->
@@ -54,13 +50,6 @@
                         </button>
                     </form>
                 </td>
-            </tr>
-            <%
-                }
-            } else {
-            %>
-            <tr>
-                <td colspan="6" class="text-center text-muted">Nenhum aluno cadastrado.</td>
             </tr>
             <%
                 }
