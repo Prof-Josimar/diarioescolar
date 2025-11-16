@@ -25,21 +25,17 @@
 
         <%
             List<Turma> listaTurmas = TurmaDAO.listarTodas();
-            request.setAttribute("listaTurmas", listaTurmas);
-            request.getRequestDispatcher("form_aluno.jsp").forward(request, response);
-
         %>
+        <select class="form-select" id="id_turma" name="id_turma" required>
+            <%
+                for (Turma turma : listaTurmas) {
+            %>
+            <option value="<%= turma.getId()%>"><%= turma.getNome()%></option>
+            <%
+                }
+            %>
+        </select>
 
-
-
-        <div class="mb-3">
-            <label for="id_turma" class="form-label">Turma:</label>
-            <select class="form-select" id="id_turma" name="id_turma" required>
-                <c:forEach var="turma" items="${listaTurmas}">
-                    <option value="${turma.id}">${turma.nome}</option>
-                </c:forEach>
-            </select>
-        </div>
 
         <div class="mb-3">
             <label for="id_turma" class="form-label">ID da Turma:</label>

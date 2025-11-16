@@ -54,5 +54,12 @@ public class TurmaDAO {
 
         return turmas;
     }
+        
+        public static void main(String[] args) {
+             List<Turma> listaTurmas = TurmaDAO.listarTodas();
+             System.out.println(listaTurmas);
+            
+
+    }
     
 }

@@ -1,7 +1,7 @@
 # Projeto Java 2025 
  
 ## Informações do sistema 
-- Data e hora: 16/11/2025  7:59:26,32 
+- Data e hora: 16/11/2025  8:54:46,09 
 - Usuário: admin 
 - Computador: LAPTOP-ACER 
 - Diretório atual: C:\Users\admin\Documents\NetBeansProjects\diarioescolar 
