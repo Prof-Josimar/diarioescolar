@@ -1,77 +1,72 @@
-
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
 <%@page import="java.util.List"%>
 <%@page import="control.AlunoDAO"%>
 <%@page import="model.Aluno"%>
-<%@page import="model.Aluno"%>
 
+<%
+    request.setAttribute("titulo", "Lista de Alunos");
+%>
+<%@ include file="header.jsp" %>
 
+<div class="card shadow-sm p-4 mt-4">
+    <h2 class="mb-4 text-center text-primary">Lista de Alunos</h2>
 
-<html>
-    <head>
-        <title>Lista de Alunos</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    </head>
+    <%
+        List<Aluno> alunos = AlunoDAO.listarAlunos();
+    %>
 
-    <body class="bg-light">
-
-        <div class="container mt-5">
-            <h2 class="mb-4">Lista de Alunos</h2>
-
+    <table class="table table-striped table-hover align-middle">
+        <thead class="table-primary">
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>MatrÌcula</th>
+                <th>Turma</th>
+                <th>Respons·vel</th>
+                <th>AÁıes</th>
+            </tr>
+        </thead>
+        <tbody>
             <%
-                List<Aluno> alunos = AlunoDAO.listarAlunos();
-                
+                if (alunos != null && !alunos.isEmpty()) {
+                    for (Aluno a : alunos) {
             %>
+            <tr>
+                <td><%= a.getId()%></td>
+                <td><%= a.getNome()%></td>
+                <td><%= a.getMatricula()%></td>
+                <td><%= a.getId_turma()%></td>
+                <td><%= a.getNomeResponsavel()%></td>
+                <td>
+                    <!-- Bot„o Editar -->
+                    <form action="form_editar_aluno.jsp" method="POST" style="display:inline;">
+                        <input type="hidden" name="id" value="<%= a.getId()%>">
+                        <button type="submit" class="btn btn-sm btn-warning">
+                            <i class="bi bi-pencil-square"></i> Editar
+                        </button>
+                    </form>
 
-            <table class="table table-striped table-hover align-middle">
-                <thead class="table-dark">
-                    <tr>
-                        <th>ID</th>
-                        <th>Nome</th>
-                        <th>Matr√≠cula</th>
-                        <th>Turma</th>
-                        <th>Respons√°vel</th>
-                        <th>A√ß√µes</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <%
-                        if (alunos != null && !alunos.isEmpty()) {
-                            for (Aluno a : alunos) {
-                    %>
-                    <tr>
-                        <td><%= a.getId()%></td>
-                        <td><%= a.getNome()%></td>
-                        <td><%= a.getMatricula()%></td>
-                        <td><%= a.getId_turma()%></td>
-                        <td><%= a.getNomeResponsavel()%></td>
-                        <td>
-                            <!-- Bot√£o Editar -->
-                            <form action="form_editar_aluno.jsp" method="POST" style="display:inline;">
-                                <input type="hidden" name="id" value="<%= a.getId()%>">
-                                <button type="submit" class="btn btn-sm btn-warning">Editar</button>
-                            </form>
+                    <!-- Bot„o Deletar -->
+                    <form action="form_excluir_aluno.jsp" method="POST" style="display:inline;"
+                          onsubmit="return confirm('Tem certeza que deseja excluir este aluno?');">
+                        <input type="hidden" name="id" value="<%= a.getId()%>">
+                        <button type="submit" class="btn btn-sm btn-danger">
+                            <i class="bi bi-trash"></i> Excluir
+                        </button>
+                    </form>
+                </td>
+            </tr>
+            <%
+                }
+            } else {
+            %>
+            <tr>
+                <td colspan="6" class="text-center text-muted">Nenhum aluno cadastrado.</td>
+            </tr>
+            <%
+                }
+            %>
+        </tbody>
+    </table>
+</div>
 
-                            <!-- Bot√£o Deletar -->
-                            <form action="deleteAluno.jsp" method="POST" style="display:inline;" 
-                                  onsubmit="return confirm('Tem certeza que deseja excluir este aluno?');">
-                                <input type="hidden" name="id" value="<%= a.getId()%>">
-                                <button type="submit" class="btn btn-sm btn-danger">Excluir</button>
-                            </form>
-                        </td>
-                    </tr>
-                    <%
-                        }
-                    } else {
-                    %>
-                    <tr><td colspan="6" class="text-center text-muted">Nenhum aluno cadastrado.</td></tr>
-                    <% }%>
-                </tbody>
-            </table>
-
-            <a href="inserirAluno.jsp" class="btn btn-primary mt-3">Cadastrar novo aluno</a>
-        </div>
-        <a href="index.jsp">Voltar ao In√≠cio</a>
-    </body>
-</html>
+<%@ include file="footer.jsp" %>

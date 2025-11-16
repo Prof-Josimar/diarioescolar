@@ -13,7 +13,7 @@ public class AlunoDAO {
     public static boolean inserirAluno(Aluno aluno) {
         String sql = "INSERT INTO aluno (nome, matricula, id_turma, nomeResponsavel) VALUES (?, ?, ?, ?)";
 
-        try (Connection con = Conexao.getConexao(); PreparedStatement stmt = con.prepareStatement(sql)) {
+        try ( Connection con = Conexao.getConexao();  PreparedStatement stmt = con.prepareStatement(sql)) {
 
             if (con == null) {
                 System.err.println("Conexão nula. Falha ao inserir aluno.");
@@ -38,7 +38,7 @@ public class AlunoDAO {
         List<Aluno> alunos = new ArrayList<>();
         String sql = "SELECT * FROM aluno";
 
-        try (Connection con = Conexao.getConexao(); PreparedStatement stmt = con.prepareStatement(sql); ResultSet rs = stmt.executeQuery()) {
+        try ( Connection con = Conexao.getConexao();  PreparedStatement stmt = con.prepareStatement(sql);  ResultSet rs = stmt.executeQuery()) {
 
             while (rs.next()) {
                 Aluno aluno = new Aluno();
@@ -61,7 +61,7 @@ public class AlunoDAO {
     public static boolean deletarAluno(int id) {
         String sql = "DELETE FROM aluno WHERE id = ?";
 
-        try (Connection con = Conexao.getConexao(); PreparedStatement stmt = con.prepareStatement(sql)) {
+        try ( Connection con = Conexao.getConexao();  PreparedStatement stmt = con.prepareStatement(sql)) {
 
             stmt.setInt(1, id);
             int linhasAfetadas = stmt.executeUpdate();
@@ -77,7 +77,7 @@ public class AlunoDAO {
         String sql = "SELECT * FROM aluno WHERE id = ?";
         Aluno aluno = null;
 
-        try (Connection con = Conexao.getConexao(); PreparedStatement stmt = con.prepareStatement(sql)) {
+        try ( Connection con = Conexao.getConexao();  PreparedStatement stmt = con.prepareStatement(sql)) {
 
             stmt.setInt(1, id);
             ResultSet rs = stmt.executeQuery();
@@ -101,7 +101,7 @@ public class AlunoDAO {
     public static boolean atualizarAluno(Aluno aluno) {
         String sql = "UPDATE aluno SET nome = ?, matricula = ?, id_turma = ?, nomeResponsavel = ? WHERE id = ?";
 
-        try (Connection con = Conexao.getConexao(); PreparedStatement stmt = con.prepareStatement(sql)) {
+        try ( Connection con = Conexao.getConexao();  PreparedStatement stmt = con.prepareStatement(sql)) {
 
             stmt.setString(1, aluno.getNome());
             stmt.setString(2, aluno.getMatricula());
@@ -116,6 +116,34 @@ public class AlunoDAO {
             System.err.println("Erro ao atualizar aluno: " + e.getMessage());
             return false;
         }
+    }
+
+    public static List<Aluno> listarAlunosPorNome(String nomeParcial) {
+        List<Aluno> alunos = new ArrayList<>();
+        String sql = "SELECT * FROM aluno WHERE nome LIKE ?";
+
+        try ( Connection con = Conexao.getConexao();  PreparedStatement stmt = con.prepareStatement(sql)) {
+
+            // Adiciona os curingas '%' para buscar parte do nome
+            stmt.setString(1, "%" + nomeParcial + "%");
+
+            try ( ResultSet rs = stmt.executeQuery()) {
+                while (rs.next()) {
+                    Aluno aluno = new Aluno();
+                    aluno.setId(rs.getInt("id"));
+                    aluno.setNome(rs.getString("nome"));
+                    aluno.setMatricula(rs.getString("matricula"));
+                    aluno.setId_turma(rs.getInt("id_turma"));
+                    aluno.setNomeResponsavel(rs.getString("nomeResponsavel"));
+                    alunos.add(aluno);
+                }
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Erro ao listar alunos por nome: " + e.getMessage());
+        }
+
+        return alunos;
     }
 
 }

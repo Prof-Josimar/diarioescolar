@@ -1,39 +1,38 @@
-<%-- 
-    Document   : cadastrar_aluno
-    Created on : 16/10/2025, 08:49:17
-    Author     : ETEP
---%>
+<%
+    request.setAttribute("titulo", "Lista de Alunos");
+%>
+<%@ include file="header.jsp" %>
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Cadastrar Aluno</title>
-                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    </head>
-    <body>
-        <h1>Cadastro de Aluno</h1>
+<div class="container mt-4">
+    <h1 class="mb-4">Cadastro de Aluno</h1>
 
-        <form action="cadastrar_aluno.jsp" method="post">
-            
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required  autofocus placeholder="Digite o nome" value="Josimar Ribeiro"/><br/><br/>
+    <form action="cadastrar_aluno.jsp" method="post" class="needs-validation" novalidate>
+        <div class="mb-3">
+            <label for="nome" class="form-label">Nome:</label>
+            <input type="text" class="form-control" id="nome" name="nome"
+                   required autofocus placeholder="Digite o nome">
+        </div>
 
-            <label for="matricula">Matrícula:</label>
-            <input type="text" id="matricula" name="matricula" required value="2262830" /><br/><br/>
+        <div class="mb-3">
+            <label for="matricula" class="form-label">Matrícula:</label>
+            <input type="text" class="form-control" id="matricula" name="matricula"
+                   required>
+        </div>
 
-            <label for="id_turma">ID da Turma:</label>
-            <input type="number" id="id_turma" name="id_turma" required  value="1"/><br/><br/>
+        <div class="mb-3">
+            <label for="id_turma" class="form-label">ID da Turma:</label>
+            <input type="number" class="form-control" id="id_turma" name="id_turma"
+                   required value="1">
+        </div>
 
-            <label for="nomeResponsavel">Nome do Responsável:</label>
-            <input type="text" id="nomeResponsavel" name="nomeResponsavel" value="Irene Ribeiro"/><br/><br/>
+        <div class="mb-3">
+            <label for="nomeResponsavel" class="form-label">Nome do Responsável:</label>
+            <input type="text" class="form-control" id="nomeResponsavel" name="nomeResponsavel" >
+        </div>
 
-            <input type="submit" value="Cadastrar"  class="btn btn-success"/>
-        </form>
+        <button type="submit" class="btn btn-success w-100">Cadastrar</button>
+    </form>
+</div>
 
-
-        <br>
-        <a href="index.jsp">Voltar ao Início</a>
-    </body>
-</html>
+<%@ include file="footer.jsp" %>
