@@ -30,7 +30,7 @@
                 <td><%= a.getId()%></td>
                 <td><%= a.getNome()%></td>
                 <td><%= a.getMatricula()%></td>
-                <td><%= a.getTurma().getNome()%></td>
+                <td><%= a.getTurma().getNome()%> ( Cód. <%= a.getTurma().getId()%> )</td>
                 <td><%= a.getNomeResponsavel()%></td>
                 <td>
                     <!-- Botão Editar -->
