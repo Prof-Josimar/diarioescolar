@@ -1,3 +1,4 @@
+<%@ include file="header.jsp" %>
 <%@page import="java.sql.*"%>
 <%@page import="control.Conexao"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -62,9 +63,11 @@
         if (stmt != null) try { stmt.close(); } catch (SQLException ignore) {}
         if (con != null) try { con.close(); } catch (SQLException ignore) {}
     }
-%>
+    
 
-<a href="index.jsp" class="btn btn-primary mt-3">Voltar</a>
+
+
+%>
 
 </body>
 </html>

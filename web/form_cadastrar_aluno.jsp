@@ -36,18 +36,23 @@
             %>
         </select>
 
+        <p id="turmaSelecionada" class="mt-2 text-primary fw-bold"></p>
 
-        <div class="mb-3">
-            <label for="id_turma" class="form-label">ID da Turma:</label>
-            <input type="number" class="form-control" id="id_turma" name="id_turma"
-                   required value="1">
-        </div>
+        <script>
+            document.getElementById("id_turma").addEventListener("change", function () {
+                const idSelecionado = this.value;
+                document.getElementById("turmaSelecionada").textContent =
+                        "ID selecionado: " + idSelecionado;
+            });
+        </script>
+
+
 
         <div class="mb-3">
             <label for="nomeResponsavel" class="form-label">Nome do Responsável:</label>
             <input type="text" class="form-control" id="nomeResponsavel" name="nomeResponsavel" >
         </div>
-
+        <br>
         <button type="submit" class="btn btn-success w-100">Cadastrar</button>
     </form>
 </div>
